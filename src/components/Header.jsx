@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
+import SvgInline from "./SvgInline"; // Import the new component
 import BrandLogo from "../assets/images/Brand_Logo.svg";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef(null); // Ref for nav element
-  const linksRef = useRef([]); // Ref for nav links
+  const navRef = useRef(null);
+  const linksRef = useRef([]);
 
   useEffect(() => {
     if (!navRef.current) return;
 
-    // Store links in ref for reliable access
     linksRef.current = navRef.current.querySelectorAll(".header__nav__item a");
 
     if (isOpen) {
@@ -39,7 +39,6 @@ const Header = () => {
       );
     }
 
-    // Cleanup animations
     return () => {
       gsap.killTweensOf([navRef.current, ...linksRef.current]);
     };
@@ -49,7 +48,12 @@ const Header = () => {
     <header className="header" id="main-header">
       <div className="header__inner flex justify-content-between align-items-center">
         <a className="header__logo" href="/">
-          <img className="in-svg" src={BrandLogo} alt="JD Web & Ship Logo" />
+          <SvgInline
+            src={BrandLogo}
+            className="in-svg"
+            id="brand-logo"
+            alt="JD Web & Ship Logo"
+          />
         </a>
         <div className="mobile__header-nav">
           <a className="header__nav-contact md-block" href="#">

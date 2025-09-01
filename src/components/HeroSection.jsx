@@ -2,12 +2,13 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Splitting from "splitting";
+import SvgInline from "./SvgInline"; // Import the new component
 import HeroGraphic from "../assets/images/hero-section-graphic.svg";
 
 const HeroSection = () => {
-  const textRef = useRef(null); // Ref for h1 element
-  const sectionRef = useRef(null); // Ref for section element
-  const contentRef = useRef(null); // Ref for animation-content
+  const textRef = useRef(null);
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -21,7 +22,6 @@ const HeroSection = () => {
       return;
     }
 
-    // Run Splitting on the h1 element
     const splitResult = Splitting({ target: textRef.current, by: "words" });
     const words = splitResult[0]?.words || [];
 
@@ -30,7 +30,6 @@ const HeroSection = () => {
       return;
     }
 
-    // GSAP animation for .word elements
     const tl = gsap.timeline();
     tl.set(words, { x: "1em", opacity: 0, ease: "power1.inOut" });
     tl.to(words, {
@@ -54,21 +53,19 @@ const HeroSection = () => {
       "-=100%",
     );
 
-    // ScrollTrigger animation for the section
     const tline = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        scrub: 1, // Smoother scrubbing
-        start: "top top", // Start when section top hits viewport top
-        end: "bottom top", // End when section bottom hits viewport top
-        anticipatePin: 1, // Prevent jumpiness
+        scrub: 1,
+        start: "top top",
+        end: "bottom top",
+        anticipatePin: 1,
       },
     });
 
     tline.to(sectionRef.current, { y: "25vh", duration: 1 });
     tline.to(contentRef.current, { opacity: 0, duration: 1 }, "-=0.5");
 
-    // Cleanup
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
       gsap.killTweensOf([words, contentRef.current, sectionRef.current]);
@@ -97,7 +94,12 @@ const HeroSection = () => {
               className="hero-section__assets animation-content"
               ref={contentRef}
             >
-              <img className="in-svg" src={HeroGraphic} alt="Hero Graphic" />
+              <SvgInline
+                src={HeroGraphic}
+                className="in-svg"
+                id="hero-graphic"
+                alt="Hero Graphic"
+              />
             </div>
           </div>
         </div>
