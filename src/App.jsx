@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollSmoother } from "gsap/ScrollSmoother";
@@ -12,6 +13,9 @@ import PricingSection from "./components/PricingSection";
 import TestimonialSection from "./components/TestimonialSection";
 import PartnersSection from "./components/PartnersSection";
 import Footer from "./components/Footer";
+import ContactSection from "./components/Contact";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsAndConditions from "./components/TermsAndConditions";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -64,22 +68,40 @@ function App() {
   }, []);
 
   return (
-    <>
+    <Router>
       <div id="smooth-wrapper">
         <div id="smooth-content">
+          {/* Always visible */}
           <Header />
-          <HeroSection />
-          <WhyChooseSection />
-          <HelpSucceedSection />
-          <HowItWorksSection />
-          <FeaturesSection />
-          <PricingSection />
-          <TestimonialSection />
-          <PartnersSection />
+          <Routes>
+            {/* Home Page */}
+            <Route
+              path="/"
+              element={
+                <>
+                  <HeroSection />
+                  <WhyChooseSection />
+                  <HelpSucceedSection />
+                  <HowItWorksSection />
+                  <FeaturesSection />
+                  <PricingSection />
+                  <TestimonialSection />
+                  <PartnersSection />
+                </>
+              }
+            />
+
+            {/* Contact Page */}
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsAndConditions />} />
+          </Routes>
+
+          {/* Always visible */}
           <Footer />
         </div>
       </div>
-    </>
+    </Router>
   );
 }
 

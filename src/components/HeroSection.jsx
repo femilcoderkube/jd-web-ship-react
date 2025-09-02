@@ -41,17 +41,17 @@ const HeroSection = () => {
       ease: "ease",
     });
 
-    tl.from(
-      contentRef.current,
-      {
-        opacity: 0,
-        duration: 1.3,
-        x: "10em",
-        transformOrigin: "0% 100%",
-        ease: "ease",
-      },
-      "-=100%",
-    );
+    // tl.from(
+    //   contentRef.current,
+    //   {
+    //     opacity: 0,
+    //     duration: 1.3,
+    //     x: "10em",
+    //     transformOrigin: "0% 100%",
+    //     ease: "ease",
+    //   },
+    //   "-=100%"
+    // );
 
     const tline = gsap.timeline({
       scrollTrigger: {
@@ -64,7 +64,7 @@ const HeroSection = () => {
     });
 
     tline.to(sectionRef.current, { y: "25vh", duration: 1 });
-    tline.to(contentRef.current, { opacity: 0, duration: 1 }, "-=0.5");
+    // tline.to(contentRef.current, { opacity: 0, duration: 1 }, "-=0.5");
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());

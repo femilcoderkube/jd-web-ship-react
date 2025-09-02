@@ -20,7 +20,7 @@ const Header = () => {
         .to(
           linksRef.current,
           { opacity: 1, y: 0, duration: 0.4, stagger: 0.1, ease: "power2.out" },
-          "-=0.2",
+          "-=0.2"
         );
     } else {
       const tl = gsap.timeline();
@@ -35,7 +35,7 @@ const Header = () => {
           // opacity: 0,
           duration: 0.4,
         },
-        "-=0.1",
+        "-=0.1"
       );
     }
 
@@ -75,13 +75,13 @@ const Header = () => {
         >
           <ul className="header__nav__main flex align-item-center">
             <li className="header__nav__item">
-              <a href="#">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="header__nav__item">
               <a href="#">About Us</a>
             </li>
             <li className="header__nav__item">
-              <a href="#">Contact Us</a>
+              <a href="/contact">Contact Us</a>
             </li>
           </ul>
           <div className="header-nav-actions flex align-items-center">
