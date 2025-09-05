@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HowItWorks from "../assets/images/how-it-work.png";
@@ -8,7 +8,7 @@ const HowItWorksSection = () => {
   const timelineRef = useRef(null); // Ref for the timeline ul
   const fillRef = useRef(null); // Ref for the timeline-line-fill
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Register ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
