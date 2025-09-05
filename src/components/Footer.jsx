@@ -82,10 +82,24 @@ const Footer = () => {
                       </Link>
                     </li>
                     <li className="footer_link">
-                      <a href="/terms">Terms Condition</a>
+                      <Link
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigate("/terms");
+                        }}
+                      >
+                        Terms Condition
+                      </Link>
                     </li>
                     <li className="footer_link">
-                      <a href="/privacy">Privacy Policy</a>
+                      <Link
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavigate("/privacy");
+                        }}
+                      >
+                        Privacy Policy
+                      </Link>
                     </li>
                   </ul>
                 </div>
