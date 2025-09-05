@@ -13,6 +13,14 @@ import { Link, useNavigate } from "react-router-dom";
 const Footer = () => {
   const navigate = useNavigate();
 
+  const handleNavigate = (path) => {
+    navigate(path);
+    // Use setTimeout to ensure scroll happens after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" }); // Fallback with smooth behavior
+    }, 0); // Delay of 0ms ensures it runs after navigation
+  };
+
   return (
     <footer className="footer" id="main-footer">
       <div className="footer__inner bg-dark pt-4 pb-4">
@@ -57,7 +65,7 @@ const Footer = () => {
                       <Link
                         onClick={(e) => {
                           e.preventDefault();
-                          navigate("/about");
+                          handleNavigate("/about");
                         }}
                       >
                         About Us
@@ -67,7 +75,7 @@ const Footer = () => {
                       <Link
                         onClick={(e) => {
                           e.preventDefault();
-                          navigate("/contact");
+                          handleNavigate("/contact");
                         }}
                       >
                         Contact Us

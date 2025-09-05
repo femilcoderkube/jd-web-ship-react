@@ -89,7 +89,7 @@ const HowItWorksSection = () => {
             </div>
           </div>
           <div className="col-12 col-lg-6">
-            <div className="timeline-wrap">
+            <div className="timeline-wrap home-tineline-wrap">
               <div className="timeline-line">
                 <div className="timeline-line-fill" ref={fillRef}></div>
               </div>
