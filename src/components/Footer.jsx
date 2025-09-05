@@ -7,9 +7,12 @@ import InstagramIcon from "../assets/images/Instagram.svg";
 import TwitterIcon from "../assets/images/Twitter.svg";
 import GooglePlay from "../assets/images/download-buttons/google-play.svg";
 import AppleStore from "../assets/images/download-buttons/apple-store.svg";
+import { Link, useNavigate } from "react-router-dom";
 // import ShopifyStore from "../assets/images/download-buttons/shopify-store.svg";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   return (
     <footer className="footer" id="main-footer">
       <div className="footer__inner bg-dark pt-4 pb-4">
@@ -51,10 +54,24 @@ const Footer = () => {
                 <div className="footer_widget_links">
                   <ul className="footer_links">
                     <li className="footer_link">
-                      <a href="#">About Us</a>
+                      <Link
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate("/about");
+                        }}
+                      >
+                        About Us
+                      </Link>
                     </li>
                     <li className="footer_link">
-                      <a href="/contact">Contact Us</a>
+                      <Link
+                        onClick={(e) => {
+                          e.preventDefault();
+                          navigate("/contact");
+                        }}
+                      >
+                        Contact Us
+                      </Link>
                     </li>
                     <li className="footer_link">
                       <a href="/terms">Terms Condition</a>
