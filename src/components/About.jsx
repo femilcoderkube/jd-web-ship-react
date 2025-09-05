@@ -9,23 +9,23 @@ import vision from "../assets/images/vision.jpg";
 
 const AboutSection = () => {
   return (
-    <main class="main-content smooth-scroll" id="smooth-wrapper">
+    <main className="main-content smooth-scroll" id="smooth-wrapper">
       <div id="smooth-content">
-        <section class="section hero-section animation-section">
-          <div class="section__inner container">
-            <div class="hero-section__content row align-items-center">
-              <div class="col-12 text-center">
-                <h1 class="h1 js-animated-text">About Us</h1>
+        <section className="section hero-section animation-section">
+          <div className="section__inner container">
+            <div className="hero-section__content row align-items-center">
+              <div className="col-12 text-center">
+                <h1 className="h1 js-animated-text">About Us</h1>
               </div>
             </div>
           </div>
         </section>
 
-        <section class="section jd_about">
-          <div class="container">
-            <div class="row">
-              <div class="col-12">
-                <div class="jd_about-cont text-center">
+        <section className="section jd_about">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <div className="jd_about-cont text-center">
                   <h2>Our Story</h2>
                   <p>
                     At JD WebnShip, our vision was of an India where logistics
@@ -37,19 +37,19 @@ const AboutSection = () => {
                 </div>
               </div>
             </div>
-            <div class="row jd_about-mission">
-              <div class="col-md-4">
-                <div class="jd_about-mission-img">
+            <div className="row jd_about-mission">
+              <div className="col-md-4">
+                <div className="jd_about-mission-img">
                   <img src={mission} alt="" />
                 </div>
               </div>
-              <div class="col-md-8">
-                <div class="jd_about-mission-cont">
+              <div className="col-md-8">
+                <div className="jd_about-mission-cont">
                   <h2>Our Mission</h2>
-                  <p class="font-weight-medium">
+                  <p className="font-weight-medium">
                     Empowering Indian Businesses Through Smarter Shipping.
                   </p>
-                  <p class="font-weight-light">
+                  <p className="font-weight-light">
                     Our Mission is to streamline logistics for every Indian
                     business, whether large or small, by providing an accessible
                     platform that connects them with reliable, cost-effective
@@ -61,14 +61,14 @@ const AboutSection = () => {
               </div>
             </div>
 
-            <div class="row jd_about-vision">
-              <div class="col-md-8">
-                <div class="jd_about-vision-cont">
+            <div className="row jd_about-vision">
+              <div className="col-md-8">
+                <div className="jd_about-vision-cont">
                   <h2>Our Vision</h2>
-                  <p class="font-weight-medium">
+                  <p className="font-weight-medium">
                     The Future of Logistics, Today.
                   </p>
-                  <p class="font-weight-light">
+                  <p className="font-weight-light">
                     As India's premier shipping aggregator, our goal is to be at
                     the forefront of innovation. By continually developing and
                     improving our platform, we aim to incorporate cutting-edge
@@ -79,8 +79,8 @@ const AboutSection = () => {
                   </p>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div class="jd_about-vision-img">
+              <div className="col-md-4">
+                <div className="jd_about-vision-img">
                   <img src={vision} alt="" />
                 </div>
               </div>
@@ -88,18 +88,18 @@ const AboutSection = () => {
           </div>
         </section>
 
-        <section class="section jd_values" id="features">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 jd_values-title">
+        <section className="section jd_values" id="features">
+          <div className="container">
+            <div className="row">
+              <div className="col-12 jd_values-title">
                 <h2>Our Values</h2>
                 <p>The Pillars of Our Promise</p>
               </div>
             </div>
-            <div class="row jd_values-card">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-icon">
+            <div className="row jd_values-card">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-icon">
                     <img src={v1} alt="" />
                   </div>
                   <h4>Customer Centricity</h4>
@@ -111,9 +111,9 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-icon">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-icon">
                     <img src={v2} alt="" />
                   </div>
                   <h4>Innovation</h4>
@@ -125,9 +125,9 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-icon">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-icon">
                     <img src={v3} alt="" />
                   </div>
                   <h4>Transparency</h4>
@@ -139,9 +139,9 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-icon">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-icon">
                     <img src={v4} alt="" />
                   </div>
                   <h4>Reliability</h4>
@@ -152,9 +152,9 @@ const AboutSection = () => {
                 </div>
               </div>
 
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-icon">
+              <div className="col-md-4">
+                <div className="card">
+                  <div className="card-icon">
                     <img src={v5} alt="" />
                   </div>
                   <h4>Integrity</h4>

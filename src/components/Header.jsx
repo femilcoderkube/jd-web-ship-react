@@ -2,11 +2,13 @@ import { useState, useEffect, useRef } from "react";
 import gsap from "gsap";
 import SvgInline from "./SvgInline"; // Import the new component
 import BrandLogo from "../assets/images/Brand_Logo.svg";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(null);
   const linksRef = useRef([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!navRef.current) return;
@@ -75,13 +77,34 @@ const Header = () => {
         >
           <ul className="header__nav__main flex align-item-center">
             <li className="header__nav__item">
-              <a href="/">Home</a>
+              <Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/");
+                }}
+              >
+                Home
+              </Link>
             </li>
             <li className="header__nav__item">
-              <a href="/about">About Us</a>
+              <Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/about");
+                }}
+              >
+                About Us
+              </Link>
             </li>
             <li className="header__nav__item">
-              <a href="/contact">Contact Us</a>
+              <Link
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/contact");
+                }}
+              >
+                Contact Us
+              </Link>
             </li>
           </ul>
           <div className="header-nav-actions flex align-items-center">
