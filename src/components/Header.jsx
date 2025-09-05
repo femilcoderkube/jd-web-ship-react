@@ -78,7 +78,7 @@ const Header = () => {
               <a href="/">Home</a>
             </li>
             <li className="header__nav__item">
-              <a href="#">About Us</a>
+              <a href="/about">About Us</a>
             </li>
             <li className="header__nav__item">
               <a href="/contact">Contact Us</a>

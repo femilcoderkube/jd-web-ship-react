@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import ContactSection from "./components/Contact";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions";
+import AboutSection from "./components/About";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -93,6 +94,7 @@ function App() {
 
             {/* Contact Page */}
             <Route path="/contact" element={<ContactSection />} />
+            <Route path="/about" element={<AboutSection />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
           </Routes>
