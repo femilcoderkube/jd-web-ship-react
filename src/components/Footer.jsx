@@ -18,7 +18,7 @@ const Footer = () => {
     // Use setTimeout to ensure scroll happens after navigation
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" }); // Fallback with smooth behavior
-    }, 0); // Delay of 0ms ensures it runs after navigation
+    }, 100); // Delay of 0ms ensures it runs after navigation
   };
 
   return (
