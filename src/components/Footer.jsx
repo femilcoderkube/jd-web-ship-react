@@ -8,7 +8,7 @@ import TwitterIcon from "../assets/images/Twitter.svg";
 import GooglePlay from "../assets/images/download-buttons/google-play.svg";
 import AppleStore from "../assets/images/download-buttons/apple-store.svg";
 import { Link, useNavigate } from "react-router-dom";
-// import ShopifyStore from "../assets/images/download-buttons/shopify-store.svg";
+import ShopifyStore from "../assets/images/download-buttons/shopify-store.svg";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -155,7 +155,7 @@ const Footer = () => {
               <a href="#">
                 <img
                   className="in-svg"
-                  // src={ShopifyStore}
+                  src={ShopifyStore}
                   alt="shopify store"
                 />
               </a>

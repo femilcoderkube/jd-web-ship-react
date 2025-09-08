@@ -7,7 +7,7 @@ import SetupIcon from "../assets/images/features-icons/setup.svg";
 import SecureIcon from "../assets/images/features-icons/secure.svg";
 import StoreIcon from "../assets/images/features-icons/store.svg";
 import TrackingIcon from "../assets/images/features-icons/tracking.svg";
-// import MobileFriendlyIcon from "../assets/images/features-icons/mobile-friendly.svg";
+import MobileFriendlyIcon from "../assets/images/features-icons/mobile-friendly.svg";
 
 const FeaturesSection = () => {
   useEffect(() => {
@@ -36,7 +36,7 @@ const FeaturesSection = () => {
             start: "top center",
             once: true,
           },
-        },
+        }
       );
     });
   }, []);
@@ -98,7 +98,7 @@ const FeaturesSection = () => {
                 </div>
                 <div className="feature animate-circle" data-number="4">
                   <div className="_icon">
-                    {/* <img className="in-svg" src={MobileFriendlyIcon} alt="" /> */}
+                    <img className="in-svg" src={MobileFriendlyIcon} alt="" />
                   </div>
                   <div className="_title">
                     <h6 className="h6">Mobile-Friendly</h6>

@@ -49,14 +49,20 @@ const Header = () => {
   return (
     <header className="header" id="main-header">
       <div className="header__inner flex justify-content-between align-items-center">
-        <a className="header__logo" href="/">
+        <Link
+          className="header__logo"
+          onClick={(e) => {
+            e.preventDefault();
+            navigate("/");
+          }}
+        >
           <SvgInline
             src={BrandLogo}
             className="in-svg"
             id="brand-logo"
             alt="JD Web & Ship Logo"
           />
-        </a>
+        </Link>
         <div className="mobile__header-nav">
           <a className="header__nav-contact md-block" href="#">
             Log in
