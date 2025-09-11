@@ -1,4 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
+import { useFormik } from "formik";
+import * as Yup from "yup";
+
 import Envelope from "../assets/images/enevlope.svg";
 import Call from "../assets/images/call.svg";
 import MapPin from "../assets/images/map-pin.svg";
@@ -9,9 +14,53 @@ import Twitter from "../assets/images/Twitter.svg";
 import MapImg from "../assets/images/map.jpg";
 
 const ContactSection = () => {
+  const [loading, setLoading] = useState(false);
+
+  const formik = useFormik({
+    initialValues: {
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone_number: "",
+      subject: "",
+      message: "",
+    },
+    validationSchema: Yup.object({
+      firstname: Yup.string().required("First name is required"),
+      lastname: Yup.string().required("Last name is required"),
+      email: Yup.string()
+        .email("Invalid email format")
+        .required("Email is required"),
+      phone_number: Yup.string(),
+      subject: Yup.string().required("Subject is required"),
+      message: Yup.string().required("Message is required"),
+    }),
+    onSubmit: async (values, { resetForm }) => {
+      setLoading(true);
+      try {
+        const response = await axios.post(
+          "https://apistage.jdwebnship.com/api/contact-us",
+          values
+        );
+        if (response) {
+          toast.success("Mail Send Successfully");
+          resetForm();
+        } else {
+          toast.error("Something went wrong. Please try again.");
+        }
+      } catch (error) {
+        console.error(error);
+        toast.error(error.response?.data?.message || "Failed to send message.");
+      } finally {
+        setLoading(false);
+      }
+    },
+  });
+
   return (
     <div className="main-content smooth-scroll" id="smooth-wrapper">
       {/* Hero Section */}
+
       <div id="smooth-content">
         <section className="section hero-section animation-section">
           <div className="section__inner container">
@@ -134,14 +183,29 @@ const ContactSection = () => {
                     "We’d love to hear from you. Whether you have a question,
                     feedback, or just want to connect — our team is here"
                   </p>
-                  <form className="jd_contact_form">
+                  <form
+                    className="jd_contact_form"
+                    onSubmit={formik.handleSubmit}
+                  >
                     <div className="row">
                       <div className="col col-lg-6">
                         <div className="form-group">
                           <label htmlFor="fname">
                             First Name <span>*</span>
                           </label>
-                          <input type="text" id="fname" name="fname" required />
+                          <input
+                            type="text"
+                            name="firstname"
+                            value={formik.values.firstname}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                          />
+                          {formik.touched.firstname &&
+                            formik.errors.firstname && (
+                              <span className="text-danger">
+                                {formik.errors.firstname}
+                              </span>
+                            )}
                         </div>
                       </div>
                       <div className="col col-lg-6">
@@ -149,7 +213,19 @@ const ContactSection = () => {
                           <label htmlFor="lname">
                             Last Name <span>*</span>
                           </label>
-                          <input type="text" id="lname" name="lname" required />
+                          <input
+                            type="text"
+                            name="lastname"
+                            value={formik.values.lastname}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                          />
+                          {formik.touched.lastname &&
+                            formik.errors.lastname && (
+                              <span className="text-danger">
+                                {formik.errors.lastname}
+                              </span>
+                            )}
                         </div>
                       </div>
                       <div className="col col-lg-12">
@@ -159,32 +235,66 @@ const ContactSection = () => {
                           </label>
                           <input
                             type="email"
-                            id="email"
                             name="email"
-                            required
+                            value={formik.values.email}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                           />
+                          {formik.touched.email && formik.errors.email && (
+                            <span className="text-danger">
+                              {formik.errors.email}
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="col col-lg-12">
                         <div className="form-group">
                           <label htmlFor="phone">Phone Number (optional)</label>
-                          <input type="tel" id="phone" name="phone" />
+                          <input
+                            type="tel"
+                            name="phone_number"
+                            value={formik.values.phone_number}
+                            onChange={formik.handleChange}
+                          />
                         </div>
                       </div>
                       <div className="col col-lg-12">
                         <div className="form-group">
-                          <label htmlFor="subject">Subject</label>
-                          <input type="text" id="subject" name="subject" />
+                          <label htmlFor="subject">
+                            Subject <span>*</span>
+                          </label>
+                          <input
+                            type="text"
+                            name="subject"
+                            value={formik.values.subject}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                          />
+                          {formik.touched.subject && formik.errors.subject && (
+                            <span className="text-danger">
+                              {formik.errors.subject}
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="col col-lg-12">
                         <div className="form-group">
-                          <label htmlFor="message">Message box</label>
+                          <label htmlFor="message">
+                            Message box <span>*</span>
+                          </label>
                           <textarea
                             id="message"
                             name="message"
                             rows="7"
-                          ></textarea>
+                            value={formik.values.message}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                          />
+                          {formik.touched.message && formik.errors.message && (
+                            <span className="text-danger">
+                              {formik.errors.message}
+                            </span>
+                          )}
                         </div>
                       </div>
                       <div className="col col-lg-12">
@@ -192,7 +302,7 @@ const ContactSection = () => {
                           type="submit"
                           className="btn btn-primary md-block w-100"
                         >
-                          Send Message
+                          {loading ? "Sending..." : "Send Message"}
                         </button>
                       </div>
                     </div>

@@ -208,6 +208,10 @@ form label{
   margin-left: -12px;
   margin-right: -12px;
 }
+.text-danger {
+  color: red;
+}
+
 
 .col{
   padding-left: 12px;

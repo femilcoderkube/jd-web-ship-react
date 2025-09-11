@@ -17,6 +17,7 @@ import ContactSection from "./components/Contact";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions";
 import AboutSection from "./components/About";
+import toast, { Toaster } from "react-hot-toast";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -70,6 +71,7 @@ function App() {
 
   return (
     <Router>
+      <Toaster position="top-right" />
       <div id="smooth-wrapper">
         <div id="smooth-content">
           {/* Always visible */}
