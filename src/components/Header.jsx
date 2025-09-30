@@ -124,7 +124,7 @@ const Header = () => {
               <Link
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate("/about");
+                  navigate("/about-us");
                   setIsOpen(false); // ✅ Close on link click
                 }}
               >

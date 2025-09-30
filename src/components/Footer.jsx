@@ -65,7 +65,7 @@ const Footer = () => {
                       <Link
                         onClick={(e) => {
                           e.preventDefault();
-                          handleNavigate("/about");
+                          handleNavigate("/about-us");
                         }}
                       >
                         About Us

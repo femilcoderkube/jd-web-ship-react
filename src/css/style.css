@@ -1969,3 +1969,9 @@ body.menu-open {
   height: auto;
   overflow: hidden;
 }
+
+
+.header__nav__item,
+.header__nav-contact{
+  font-size: 1.125rem;
+}
