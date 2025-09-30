@@ -96,7 +96,7 @@ function App() {
 
             {/* Contact Page */}
             <Route path="/contact" element={<ContactSection />} />
-            <Route path="/about" element={<AboutSection />} />
+            <Route path="/about-us" element={<AboutSection />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsAndConditions />} />
           </Routes>

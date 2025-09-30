@@ -65,7 +65,7 @@
   :root {
     --base-size: 0.9vw;
     --header-top-gap: 3.75rem;
-    --h1: 4.375rem;
+    --h1: 3.50rem;
     --h2: 2.625rem;
     --h3: 2.125rem;
     --h4: 1.5rem;
@@ -73,13 +73,19 @@
     --h6: 1.125rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1279px) {
   :root {
     --base-size: 0.8333vw;
     --pt-4: 4.375rem;
     --pt-6: 8.75rem;
     --pb-4: 4.375rem;
     --pb-6: 8.75rem;
+    --h1: 4.375rem;
+    --h2: 2.625rem;
+    --h3: 2.125rem;
+    --h4: 1.5rem;
+    --h5: 1.375rem;
+    --h6: 1.125rem;
   }
 }
 #smooth-wrapper {
@@ -572,7 +578,7 @@ button {
   margin-right: auto;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
-  max-width: 103.125rem;
+  max-width: 90rem;
   width: 100%;
 }
 
@@ -1633,9 +1639,18 @@ body.stopScrolling {
 .header__inner {
   min-height: 5.3125rem;
   padding: 0.9375rem;
-  max-width: 105rem;
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 1279px){
+  .header__inner,
+  .container {
+  max-width: 80rem;
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
+}
+
 }
 .header__logo {
   display: flex;
@@ -1698,20 +1713,20 @@ body.stopScrolling {
   .hamburger {
     height: 56px;
     min-width: 56px;
-    background-color: var(--color-14);
+    background-color: var(--primary-bg);
     border-radius: 100%;
     padding: 0;
     z-index: 9999;
   }
 
-  #hamburger {
+  .hamburger {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjE0IiB5MT0iMjEiIHgyPSI0MiIgeTI9IjIxIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjE0IiB5MT0iMjgiIHgyPSI0MiIgeTI9IjI4IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjE0IiB5MT0iMzUiIHgyPSIzNCIgeTI9IjM1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     transition: 0.5s transform ease-in-out;
   }
-  #hamburger.is-active {
+  .hamburger.is-active {
     transform: rotate(360deg);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNTYiIHZpZXdCb3g9IjAgMCA1NiA1NiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeDE9IjE2LjUyOTkiIHkxPSIyMC4xNTIiIHgyPSI0MC4yNzUzIiB5Mj0iMzQuOTg5NyIgc3Ryb2tlPSJ3aGl0ZSIgc3Ryb2tlLXdpZHRoPSIyIi8+CjxsaW5lIHgxPSIxNS40NzAxIiB5MT0iMzUuMTQ0MSIgeDI9IjM5LjIxNTQiIHkyPSIyMC4zMDY0IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==);
   }
@@ -1743,28 +1758,39 @@ body.stopScrolling {
   .header-nav {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     max-width: 18.75rem;
-    flex: 0 0 100%;
     width: 100%;
     height: 100lvh;
-    padding-top: 5.875rem;
-    opacity: 0;
+    padding: 5.875rem 0 1.875rem;
     z-index: 999;
     pointer-events: none;
-    align-items: flex-start;
-    padding-bottom: 1.875rem;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
     background-color: var(--body-text-color);
     box-shadow: -16px 0 32px rgba(0, 0, 0, 0.15);
     border-radius: 1.5rem 0 0 1.5rem;
+  
+    opacity: 0;
+    transform: translateX(100%);
+    transition: transform 0.4s ease, opacity 0.4s ease;
   }
+  
+  .header-nav.is-active {
+    right: 0;                
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;    
+  }
+  
   .header-nav ul {
     flex-direction: column;
     width: 100%;
     align-items: flex-end;
     padding: 0 2.375rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
   }
   .header-nav ul > li + li {
     margin-top: 0.9375rem;
@@ -1774,7 +1800,7 @@ body.stopScrolling {
     margin-right: 0.5rem;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .mobile__header-nav {
     display: none;
   }
@@ -1914,4 +1940,38 @@ footer {
   .footer_bottom .footer__logo {
     max-width: 8.75rem;
   }
+}
+
+
+html{
+  scroll-behavior: smooth;
+  font-size: 14px;
+}
+
+@media (min-width: 1280px){
+  html{
+      font-size: 1vw;
+  }
+}
+
+@media (min-width: 1601px){
+  html{
+      font-size: 16px;
+  }
+}
+
+section.section.hero-section.animation-section.about,
+section.section.hero-section.animation-section.contact {
+  min-height: 70vh;
+}
+
+body.menu-open {
+  height: auto;
+  overflow: hidden;
+}
+
+
+.header__nav__item,
+.header__nav-contact{
+  font-size: 1.125rem;
 }

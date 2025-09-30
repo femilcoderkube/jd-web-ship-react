@@ -1,6 +1,6 @@
 .hero-section {
   max-width: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   width: 100vw;
   position: relative;
   z-index: 1;
@@ -76,6 +76,7 @@ h4 + *,
   display: flex;
   flex-direction: column;
   gap: 0.9375rem;
+  height: 100%;
 }
 .card:first-child {
   box-shadow: 0 1rem 2rem rgba(0, 123, 255, 0.08);
@@ -295,6 +296,7 @@ ul.timeline {
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: none;
 }
 .slider_partners .partner_slide + .partner_slide {
   margin-left: 1.5rem;
@@ -390,6 +392,7 @@ ul.timeline {
   .hero-section {
     min-height: 60rem;
   }
+ 
 
   .grid__boxes {
     display: grid;
@@ -419,12 +422,17 @@ ul.timeline {
     grid-area: 2/10/3/13;
   }
 }
+.section__body .cards  .card {
+  min-height: 21.5625rem;
+}
 @media (max-width: 1023px) {
   .hero-section {
     padding-top: 10rem;
     border-radius: 0 0 1.5rem 1.5rem;
   }
-
+  .hero-section__content {
+    padding-top: 4rem;
+  }
   .section__header,
   .hero-section__content,
   .features-section .features_section_header {
@@ -457,6 +465,7 @@ ul.timeline {
   .hero-section__assets svg {
     margin-top: 1.875rem;
   }
+  
 
   .grid__boxes {
     flex-wrap: wrap;
@@ -478,7 +487,8 @@ ul.timeline {
   .features .feature {
     position: static;
     transform: none !important;
-    flex: 0 0 200px;
+    flex: 0 0 12.5rem;
+    height: 12.5rem;
   }
 
   #features {
@@ -491,8 +501,15 @@ ul.timeline {
     max-width: 100%;
     flex: 100%;
   }
+  .section__body .cards  .card {
+    min-height: auto;
+  }
 
   .slider_partners .partner_slide {
     max-width: 16rem;
   }
+}
+
+.js-animated-text{
+  margin-bottom: 0.988rem !important;
 }
