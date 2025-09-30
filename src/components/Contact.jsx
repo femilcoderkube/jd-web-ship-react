@@ -112,7 +112,8 @@ const ContactSection = () => {
                           <span className="icon-bg">
                             <img src={MapPin} alt="Location" />
                           </span>
-                          123 Business Street, City, Country – ZIP
+                          404, Green Atria, Anand Mahal Road, Above United Green
+                          Hospital, Adajan, Surat, Gujarat - 395009
                         </a>
                       </li>
                     </ul>
@@ -280,7 +281,7 @@ const ContactSection = () => {
                       <div className="col col-lg-12">
                         <div className="form-group">
                           <label htmlFor="message">
-                            Message box <span>*</span>
+                            Message <span>*</span>
                           </label>
                           <textarea
                             id="message"

@@ -119,7 +119,11 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className="footer_link">
-                      <a href="#">
+                      <a
+                        href="https://www.instagram.com/jdwebnship/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon">
                           <img src={InstagramIcon} alt="" />
                         </span>
@@ -127,7 +131,11 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className="footer_link">
-                      <a href="#">
+                      <a
+                        href="https://x.com/jdwebnship"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
                         <span className="icon">
                           <img src={TwitterIcon} alt="" />
                         </span>

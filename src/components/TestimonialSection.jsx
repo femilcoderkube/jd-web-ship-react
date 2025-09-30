@@ -42,30 +42,70 @@ const TestimonialSection = () => {
                   <SwiperSlide className="testimonial_slide swiper-slide card">
                     <div className="review">
                       <p>
-                        “I listed my products within an hour and started getting
-                        orders the same day. No fees, no stress – just pure
-                        business.”
+                        Selling online was confusing for me earlier, but JD Web
+                        & Ship made the whole process simple. I could upload my
+                        products easily and started getting orders in no time.
                       </p>
                     </div>
                     <div className="reviewers">
-                      <span className="name">Ramesh Gupta,</span>
+                      <span className="name">Ramesh Kumar,</span>
                       <span className="designation">Wholesaler</span>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
                     <div className="review">
                       <p>
-                        “Creating my store was so easy. Now I can sell directly
-                        to my customers and grow without worrying about extra
-                        costs.”
+                        What I liked the most is how easy it is to build a store
+                        here. Even without any technical knowledge, I created my
+                        shop and the support team guided me step by step.
                       </p>
                     </div>
                     <div className="reviewers">
-                      <span className="name">Priya Shah,</span>
+                      <span className="name">Pooja Shah,</span>
                       <span className="designation">Retailer</span>
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
+                    <div className="review">
+                      <p>
+                        As a wholesaler, reaching new customers was always a
+                        challenge. With JD Web & Ship, I found a fair and
+                        transparent way to sell online, and it also saved me a
+                        lot of effort.
+                      </p>
+                    </div>
+                    <div className="reviewers">
+                      <span className="name">Arjun Patel,</span>
+                      <span className="designation">Retailer</span>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="testimonial_slide swiper-slide card">
+                    <div className="review">
+                      <p>
+                        I was already using Shopify, but connecting it with JD
+                        Web & Ship was very smooth. Now I can manage my products
+                        and sales in one place without any hassle.
+                      </p>
+                    </div>
+                    <div className="reviewers">
+                      <span className="name">Sneha Verma ,</span>
+                      <span className="designation">Retailer</span>
+                    </div>
+                  </SwiperSlide>
+                  <SwiperSlide className="testimonial_slide swiper-slide card">
+                    <div className="review">
+                      <p>
+                        For me, the best thing about JD Web & Ship is the
+                        simplicity. It’s affordable, easy to use, and lets me
+                        focus fully on my business instead of technical work.
+                      </p>
+                    </div>
+                    <div className="reviewers">
+                      <span className="name">Mohammed Ali,</span>
+                      <span className="designation">Retailer</span>
+                    </div>
+                  </SwiperSlide>
+                  {/* <SwiperSlide className="testimonial_slide swiper-slide card">
                     <div className="review">
                       <p>
                         “Creating my store was so easy. Now I can sell directly
@@ -77,46 +117,7 @@ const TestimonialSection = () => {
                       <span className="name">Priya Shah,</span>
                       <span className="designation">Retailer</span>
                     </div>
-                  </SwiperSlide>
-                  <SwiperSlide className="testimonial_slide swiper-slide card">
-                    <div className="review">
-                      <p>
-                        “Creating my store was so easy. Now I can sell directly
-                        to my customers and grow without worrying about extra
-                        costs.”
-                      </p>
-                    </div>
-                    <div className="reviewers">
-                      <span className="name">Priya Shah,</span>
-                      <span className="designation">Retailer</span>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide className="testimonial_slide swiper-slide card">
-                    <div className="review">
-                      <p>
-                        “Creating my store was so easy. Now I can sell directly
-                        to my customers and grow without worrying about extra
-                        costs.”
-                      </p>
-                    </div>
-                    <div className="reviewers">
-                      <span className="name">Priya Shah,</span>
-                      <span className="designation">Retailer</span>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide className="testimonial_slide swiper-slide card">
-                    <div className="review">
-                      <p>
-                        “Creating my store was so easy. Now I can sell directly
-                        to my customers and grow without worrying about extra
-                        costs.”
-                      </p>
-                    </div>
-                    <div className="reviewers">
-                      <span className="name">Priya Shah,</span>
-                      <span className="designation">Retailer</span>
-                    </div>
-                  </SwiperSlide>
+                  </SwiperSlide> */}
                 </Swiper>
               </div>
             </div>

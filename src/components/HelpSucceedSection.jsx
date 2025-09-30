@@ -56,8 +56,11 @@ const HelpSucceedSection = () => {
                 <div className="grid__boxes">
                   <div className="box-1 card">
                     <div className="card__title text-center">
-                      <h4 className="h4">One Platform</h4>
-                      <p>Manage everything from one place.</p>
+                      <h4 className="h4">All-in-One Shipping Platform </h4>
+                      <p>
+                        Access multiple courier partners on a single platform
+                        for easy and fast shipping .
+                      </p>
                     </div>
                     <div className="card__asset">
                       <img src={OnePlatform} alt="one platform" />
@@ -65,10 +68,10 @@ const HelpSucceedSection = () => {
                   </div>
                   <div className="box-2 card">
                     <div className="card__title text-center">
-                      <h4 className="h4">Free Online Store</h4>
+                      <h4 className="h4">Best Shipping Rates</h4>
                       <p>
-                        Create your shop instantly, <br />
-                        no coding required.
+                        Save money with discounted rates across India’s leading
+                        courier services, ideal for wholesalers and retailers
                       </p>
                     </div>
                     <div className="card__asset">
@@ -77,10 +80,10 @@ const HelpSucceedSection = () => {
                   </div>
                   <div className="box-3 card">
                     <div className="card__title text-center">
-                      <h4 className="h4">Transparent System</h4>
+                      <h4 className="h4">Free Website</h4>
                       <p>
-                        No setup fees, <br />
-                        no hidden charges.
+                        Start selling online instantly with a free website
+                        connected to our shipping services.
                       </p>
                     </div>
                     <div className="card__asset">
@@ -89,10 +92,11 @@ const HelpSucceedSection = () => {
                   </div>
                   <div className="box-4 card">
                     <div className="card__title text-center">
-                      <h4 className="h4">For Everyone</h4>
+                      <h4 className="h4">Seamless Integration</h4>
                       <p>
-                        Wholesalers and retailers <br />
-                        both benefit.
+                        Connect your Shopify store to our platform for automatic
+                        order processing, easy shipping management, and
+                        real-time tracking
                       </p>
                     </div>
                     <div className="card__asset">
@@ -101,10 +105,9 @@ const HelpSucceedSection = () => {
                   </div>
                   <div className="box-5 card">
                     <div className="card__title text-center">
-                      <h4 className="h4">Easy Growth</h4>
+                      <h4 className="h4">Real-Time Tracking</h4>
                       <p>
-                        Manage, monitor, and scale <br />
-                        your business online.
+                        Keep your customers informed with live shipment updates.
                       </p>
                     </div>
                     <div className="card__asset">

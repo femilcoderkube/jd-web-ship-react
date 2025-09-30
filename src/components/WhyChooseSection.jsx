@@ -13,12 +13,23 @@ const WhyChooseSection = () => {
                     Why Choose JD Web & Ship?
                   </h2>
                   <p>
-                    We built JD Web & Ship to make selling easy for sellers,
-                    wholesalers, and retailers. Our platform provides all the
-                    tools you need to list products, create an online store, and
-                    start selling instantly. Whether you’re a local wholesaler
-                    or a retail seller, we give you a fair, transparent, and
-                    simple way to sell online.
+                    At JDwebnship, we created our platform to make online
+                    selling simple and stress-free for sellers, wholesalers, and
+                    retailers. You can easily list your products, create your
+                    own online store, and start selling right away without any
+                    technical skills. We also offer seamless Shopify
+                    integration, so if you already have a Shopify store, you can
+                    connect it with our platform and manage everything from one
+                    place.
+                  </p>
+                  <p>
+                    Whether you are a local wholesaler looking to reach more
+                    buyers or a retail seller wanting to grow your customer
+                    base, our platform makes the process smooth and transparent.
+                    We believe in fairness and simplicity, which is why our
+                    tools are designed to save you time, reduce costs, and help
+                    you manage your business with ease. Selling online should
+                    not be complicated, and with JD Web & Ship, it isn’t.
                   </p>
                 </div>
               </div>

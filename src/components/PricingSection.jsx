@@ -37,7 +37,8 @@ const PricingSection = () => {
                 <div className="text-center">
                   <h2 className="section__header-heading">Pricing</h2>
                   <p>
-                    No hidden fees. No upfront charges. Only pay when you earn.
+                    We don't charge you anything. Use our platform, manage your
+                    shipments, and even get a free website.
                   </p>
                 </div>
               </div>
@@ -47,27 +48,32 @@ const PricingSection = () => {
                     <div className="card__title text-center">
                       <h2 className="h1">₹0</h2>
                       <h4 className="h4">Subscription Fee</h4>
+                      <p>No monthly or yearly charges.</p>
                     </div>
                   </div>
                   <div className="card-2 card">
                     <div className="card__title text-center">
                       <h2 className="h1">₹0</h2>
                       <h4 className="h4">Website Setup & Maintenance</h4>
+                      <p>Get your free business website with no cost.</p>
                     </div>
                   </div>
                   <div className="card-3 card">
                     <div className="card__title text-center">
                       <h2 className="h1">0%</h2>
                       <h4 className="h4">
-                        Commission on <br />
-                        Marketing Spend
+                        Commission
+                        {/* on <br />
+                        Marketing Spend */}
                       </h4>
+                      <p> You keep 100% of your earnings.</p>
                     </div>
                   </div>
                   <div className="card-4 card">
                     <div className="card__title text-center">
-                      <h2 className="h1">3%</h2>
-                      <h4 className="h4">+ GST – On Delivered Orders</h4>
+                      <h2 className="h1">₹0</h2>
+                      <h4 className="h4">Hidden Charges</h4>
+                      <p>Pay only your courier fees, nothing extra.</p>
                     </div>
                   </div>
                 </div>

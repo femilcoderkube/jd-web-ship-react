@@ -81,10 +81,12 @@ const HeroSection = () => {
         <div className="hero-section__content row align-items-center">
           <div className="col-12 col-lg-6">
             <h1 className="h1 js-animated-text" ref={textRef}>
-              We ship success, <br />
-              You win customers.
+              Simplify Your Shipping – All in One Place
             </h1>
-            <p>Start Free. Grow Limitless. Zero Fees.</p>
+            <p>
+              We are India's trusted shipping aggregator, helping businesses
+              save time, reduce costs, and deliver faster.
+            </p>
             <a className="btn btn-primary" href="#">
               Get Started For Free
             </a>
