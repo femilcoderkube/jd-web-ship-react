@@ -58,10 +58,8 @@ const ContactSection = () => {
   });
 
   return (
-    <div className="main-content smooth-scroll" id="smooth-wrapper">
+    <div>
       {/* Hero Section */}
-
-      <div id="smooth-content">
         <section className="section hero-section animation-section">
           <div className="section__inner container">
             <div className="hero-section__content row align-items-center">
@@ -313,7 +311,6 @@ const ContactSection = () => {
             </div>
           </div>
         </section>
-      </div>
     </div>
   );
 };
