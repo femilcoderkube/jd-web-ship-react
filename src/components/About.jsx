@@ -7,6 +7,8 @@ import v5 from "../assets/images/v5.svg";
 import mission from "../assets/images/mission.jpg";
 import vision from "../assets/images/vision.jpg";
 
+import "../css/about.css";
+
 const AboutSection = () => {
   return (
     <main className="main-content smooth-scroll">
