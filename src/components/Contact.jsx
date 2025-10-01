@@ -278,6 +278,7 @@ const ContactSection = () => {
                           )}
                         </div>
                       </div>
+
                       <div className="col col-lg-12">
                         <div className="form-group">
                           <label htmlFor="message">
