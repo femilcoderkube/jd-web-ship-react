@@ -1,12 +1,11 @@
 import React from "react";
+import shadowfax from "../assets/images/shadowfax.png";
+import bluedart from "../assets/images/bluedart.png";
+import delhivery from "../assets/images/delhivery.png";
+import xpressbees from "../assets/images/xpressbees.png";
 
 const PartnersSection = () => {
-  const partnerImages = [
-    "https://www.lynk.ie/wp-content/uploads/2024/04/Frame.png",
-    "https://www.lynk.ie/wp-content/uploads/2024/04/Frame-1.png",
-    "https://www.lynk.ie/wp-content/uploads/2024/04/Frame-2.png",
-    "https://www.lynk.ie/wp-content/uploads/2024/04/Frame-3.png",
-  ];
+  const partnerImages = [shadowfax, bluedart, delhivery, xpressbees];
 
   return (
     <section className="section partners_section pb-6 pt-4">
@@ -29,11 +28,11 @@ const PartnersSection = () => {
             <div className="row">
               <div className="col-12 col-lg-12">
                 <div className="slider_partners_wrapper">
-                  {[1, 2].map((_, index) => (
-                    <div className="slider_partners" key={index}>
-                      {partnerImages.map((src, i) => (
-                        <div className="partner_slide card" key={i}>
-                          <img src={src} alt="" />
+                  {[1, 2].map((_, slideIndex) => (
+                    <div className="slider_partners" key={slideIndex}>
+                      {partnerImages.map((image, imgIndex) => (
+                        <div className="partner_slide card" key={`${slideIndex}-${imgIndex}`}>
+                          <img src={image} alt={`Partner ${imgIndex + 1}`} />
                         </div>
                       ))}
                     </div>
