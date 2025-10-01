@@ -18,6 +18,7 @@ import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsAndConditions from "./components/TermsAndConditions";
 import AboutSection from "./components/About";
 import toast, { Toaster } from "react-hot-toast";
+import Home from "./components/Home";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -81,16 +82,7 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <HeroSection />
-                  <WhyChooseSection />
-                  <HelpSucceedSection />
-                  <HowItWorksSection />
-                  <FeaturesSection />
-                  <PricingSection />
-                  <TestimonialSection />
-                  <PartnersSection />
-                </>
+               <Home/>
               }
             />
 
