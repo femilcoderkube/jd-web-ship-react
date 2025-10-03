@@ -27,6 +27,9 @@ const HowItWorksSection = () => {
       return;
     }
 
+    // Add this at the top, outside the function if possible
+    ScrollTrigger.config({ ignoreMobileResize: true });
+
     // Create GSAP timeline for pinning and fill animation
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -36,6 +39,7 @@ const HowItWorksSection = () => {
         pin: true, // Pin the section
         scrub: 1, // Smooth scrubbing
         anticipatePin: 1, // Prevent jumpiness
+        invalidateOnRefresh: true, // Recalculate on resize/refresh
       },
     });
 
@@ -50,6 +54,7 @@ const HowItWorksSection = () => {
         start: "top top",
         end: `+=${listItems.length * 200}`,
         scrub: 1,
+        pinnedContainer: section, // Important for nested triggers in pinned container
         onEnter: () => {
           item.classList.add("active");
         },
