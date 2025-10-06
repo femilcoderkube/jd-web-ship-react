@@ -22,6 +22,26 @@
   text-transform: none;
   font-weight: var(--font-weight-bold);
 }
+/* section.jd_trust{
+  padding-bottom: 5rem;
+} */
+
+section.jd_trust p{
+  font-size: 1.24rem;
+  margin-bottom: 1.375rem;
+  font-weight: 300;
+}
+
+section.jd_trust ul{
+  font-size: 1.24rem;
+  font-weight: 300;
+  margin-bottom: 1.375rem;
+  list-style: disc;
+  padding-left: 1.24rem;
+}
+section.jd_trust ul li{
+  margin-bottom: 0.8rem;
+}
 
 h2{
   margin-bottom:  0.9375rem;
@@ -34,7 +54,7 @@ h2{
   z-index: 1;
   background: var(--light-bg);
   border-radius: 1.5rem 1.5rem 0 0;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 
 section.jd_about{
@@ -44,7 +64,7 @@ section.jd_about{
   z-index: 1;
   background: var(--light-bg);
   border-radius: 1.5rem 1.5rem 0 0;
-  margin-top: 5px;
+  margin-top: 8px;
 
 }
 
@@ -59,6 +79,12 @@ section.jd_about .jd_about-mission{
  align-items: center;
  /* gap: 3.75rem; */
 }
+
+section.jd_about .jd_about-promise{
+  padding-top: 0;
+  padding-bottom: 2.375rem;
+}
+
 
 section.jd_about .jd_about-mission-img  {
   border-radius: 2.5rem;
@@ -137,6 +163,7 @@ section.jd_values  .jd_values-title p{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .jd_values-card{
   margin-left: -0.9375rem;
@@ -168,7 +195,7 @@ section.jd_values  .jd_values-title p{
       gap: 30px;
     }
     .row.jd_about-mission{
-       gap: 30px;
+       gap: 18px;
     }
     section.jd_about .jd_about-vision-cont p,
     section.jd_about .jd_about-mission-cont p{
@@ -177,10 +204,17 @@ section.jd_values  .jd_values-title p{
     section.jd_about .jd_about-vision,
     section.jd_values{
           padding: 2.375rem 0;
+          /* margin-bottom: 1.5rem; */
       }
       .jd_values-card .col-md-4{
         max-width: 100%;
         flex: 0  0 100%;
       }
-        
+      section.jd_about .jd_about-mission{
+        padding: 2.375rem 0;
+        padding-bottom: 0;
+      }
+     .row.jd_about-mission.jd_about-promise{
+      padding-top: 0;
+     }
 }
