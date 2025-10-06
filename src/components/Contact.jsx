@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Splitting from "splitting";
 
 import Envelope from "../assets/images/enevlope.svg";
 import Call from "../assets/images/call.svg";
@@ -17,6 +20,123 @@ import "../css/terms.css";
 
 const ContactSection = () => {
   const [loading, setLoading] = useState(false);
+  const textRef = useRef(null);
+  const sectionRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Hero-like animation for the first section
+    if (!textRef.current || !sectionRef.current || !contentRef.current) {
+      console.warn("ContactSection hero-like refs not found:", {
+        textRef: textRef.current,
+        sectionRef: sectionRef.current,
+        contentRef: contentRef.current,
+      });
+      return;
+    }
+
+    const splitResult = Splitting({ target: textRef.current, by: "words" });
+    const words = splitResult[0]?.words || [];
+
+    if (words.length === 0) {
+      console.warn("Splitting failed: No words found for main heading");
+      return;
+    }
+
+    const tl = gsap.timeline();
+    tl.set(words, { x: "1em", opacity: 0, ease: "power1.inOut" });
+    tl.to(words, {
+      opacity: 1,
+      x: "0em",
+      duration: 1.3,
+      stagger: { from: "left", amount: 1.25 },
+      transformOrigin: "0% 100%",
+      ease: "ease",
+    });
+
+    // Uncomment if you want content slide-in like hero
+    // tl.from(
+    //   contentRef.current,
+    //   {
+    //     opacity: 0,
+    //     duration: 1.3,
+    //     x: "10em",
+    //     transformOrigin: "0% 100%",
+    //     ease: "ease",
+    //   },
+    //   "-=100%"
+    // );
+
+    const tline = gsap.timeline({
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        scrub: 1,
+        start: "top top",
+        end: "bottom top",
+        anticipatePin: 1,
+      },
+    });
+
+    tline.to(sectionRef.current, { y: "25vh", duration: 1 });
+    // tline.to(contentRef.current, { opacity: 0, duration: 1 }, "-=0.5");
+
+    // Animate contact blocks on scroll
+    const blocks = document.querySelectorAll(".jd-contact-block");
+    gsap.set(blocks, { opacity: 0, y: "30px" });
+
+    ScrollTrigger.batch(blocks, {
+      onEnter: (batch) =>
+        gsap.to(batch, {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power2.out",
+        }),
+      start: "top 80%",
+    });
+
+    // Animate form on scroll
+    const form = document.querySelector(".jd_contact-card");
+    if (form) {
+      gsap.set(form, { opacity: 0, x: "50px" });
+      ScrollTrigger.create({
+        trigger: form,
+        onEnter: () =>
+          gsap.to(form, {
+            opacity: 1,
+            x: 0,
+            duration: 0.8,
+            ease: "power2.out",
+          }),
+        start: "top 85%",
+      });
+    }
+
+    // Simple scroll movement for the main contact section (lighter)
+    const contactSection = document.querySelector(".section.jd_contact");
+    if (contactSection) {
+      ScrollTrigger.create({
+        trigger: contactSection,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1,
+        onUpdate: (self) => {
+          gsap.to(contactSection, {
+            y: self.progress * -10 + "vh",
+            duration: 0.3,
+          });
+        },
+      });
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      gsap.killTweensOf([words, contentRef.current, sectionRef.current]);
+    };
+  }, []);
 
   const formik = useFormik({
     initialValues: {
@@ -61,12 +181,23 @@ const ContactSection = () => {
 
   return (
     <div>
+      <Toaster />
       {/* Hero Section */}
-      <section className="section hero-section animation-section contact">
+      <section
+        className="section hero-section animation-section contact"
+        ref={sectionRef}
+      >
         <div className="section__inner container">
           <div className="hero-section__content row align-items-center">
-            <div className="col-12 text-center">
-              <h1 className="h1 js-animated-text">Contact Us</h1>
+            <div className="col-md-8 col-12 text-center mx-auto">
+              <h1 className="h1 js-animated-text" ref={textRef}>
+                We're Here to Help!
+              </h1>
+              <p ref={contentRef}>
+                Have questions? Need a custom quote? Or just want to learn more
+                about how JD Web and Ship can transform your logistics? Reach
+                out to our friendly team – we're always happy to assis
+              </p>
             </div>
           </div>
         </div>
@@ -85,12 +216,12 @@ const ContactSection = () => {
                     <li>
                       <a
                         className="flex align-items-center hover-link"
-                        href="mailto:support@jdwebnship.com"
+                        href="mailto:info@jdwebandship.com"
                       >
                         <span className="icon-bg">
                           <img src={Envelope} alt="Email" />
                         </span>
-                        support@jdwebnship.com
+                        info@jdwebandship.com
                       </a>
                     </li>
                     <li>
@@ -121,8 +252,8 @@ const ContactSection = () => {
                 <hr />
 
                 <div className="jd-contact-block">
-                  <h4>Business Hours</h4>
-                  <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                  <h4>Operating Hours</h4>
+                  <p>Monday - Friday: 9:00 AM - 6:00 PM IST</p>
                   <p>Saturday: 10:00 AM – 2:00 PM</p>
                   <p>Sunday: Closed</p>
                 </div>
@@ -179,11 +310,12 @@ const ContactSection = () => {
             {/* Contact Form */}
             <div className="col-lg-6">
               <div className="jd_contact-card">
-                <h2>How can we help?</h2>
-                <p>
-                  "We’d love to hear from you. Whether you have a question,
-                  feedback, or just want to connect — our team is here"
-                </p>
+                <h2>Send Us a Message.</h2>
+                {/* <p>
+                  Have questions? Need a custom quote? Or just want to learn
+                  more about how JD Web and Ship can transform your logistics?
+                  Reach out to our friendly team – we're always happy to assist
+                </p> */}
                 <form
                   className="jd_contact_form"
                   onSubmit={formik.handleSubmit}

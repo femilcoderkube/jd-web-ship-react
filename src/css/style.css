@@ -530,6 +530,13 @@ textarea.form-control::placeholder,
 .btn-primary svg path {
   fill: var(--light-text);
 }
+
+.jd_contact-card .btn-primary:hover{
+  background-color: transparent;
+  color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+}
+
 .btn-primary:hover {
   background-color: transparent;
   color: var(--text-light-color);
@@ -1961,8 +1968,19 @@ html{
 }
 
 section.section.hero-section.animation-section.about,
-section.section.hero-section.animation-section.contact {
+section.section.hero-section.animation-section.contact,
+section.section.hero-section.animation-section.terms {
   min-height: 70vh;
+}
+
+section.section.hero-section.animation-section.about p{
+  font-size: 1.25rem;
+}
+@media (max-width:991px) {
+  section.jd_about .jd_about-cont p,
+  section.section.hero-section.animation-section.about p{
+    font-size: 1.25rem;
+  }
 }
 
 body.menu-open {
@@ -1974,4 +1992,9 @@ body.menu-open {
 .header__nav__item,
 .header__nav-contact{
   font-size: 1.125rem;
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
