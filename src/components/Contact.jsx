@@ -244,8 +244,8 @@ const ContactSection = () => {
                         <span className="icon-bg">
                           <img src={MapPin} alt="Location" />
                         </span>
-                        404, Green Atria, Anand Mahal Road, Above United Green
-                        Hospital, Adajan, Surat, Gujarat - 395009
+                        404, Green Atria, Above United Green Hospital, Anand
+                        Mahal Road-Adajan, Surat, Gujarat - 395009
                       </a>
                     </li>
                   </ul>

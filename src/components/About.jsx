@@ -9,6 +9,8 @@ import v4 from "../assets/images/v4.svg";
 import v5 from "../assets/images/v5.svg";
 import v6 from "../assets/images/v6.svg";
 import v7 from "../assets/images/v7.svg";
+import v8 from "../assets/images/v8.svg";
+import v9 from "../assets/images/v9.svg";
 import mission from "../assets/images/mission.jpg";
 import vision from "../assets/images/vision.jpg";
 import promise from "../assets/images/promise.jpg";
@@ -388,6 +390,32 @@ const AboutSection = () => {
                 <p>
                   Handle COD orders with ease and receive settlements without
                   delays
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <div className="card-icon">
+                  <img src={v8} alt="" />
+                </div>
+                <h4>Dedicated Customer Support</h4>
+                <p>
+                  Our support team is always available to guide you through
+                  setup, integrations, and shipping-related queries, ensuring a
+                  smooth experience.
+                </p>
+              </div>
+            </div>
+            <div className="col-md-4">
+              <div className="card">
+                <div className="card-icon">
+                  <img src={v9} alt="" />
+                </div>
+                <h4>Easy Returns and Refund Management</h4>
+                <p>
+                  Handle product returns and refunds quickly through our simple
+                  system designed to save time and maintain customer
+                  satisfaction.
                 </p>
               </div>
             </div>
