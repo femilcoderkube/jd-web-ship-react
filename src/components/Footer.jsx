@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className="footer_widget_contact">
                   <ul className="footer_links">
                     <li className="footer_link">
-                      <a href="#">
+                      <a href="mailto:supprt@jdwebnship.com">
                         <span className="icon">
                           <img src={EnvelopeIcon} alt="" />
                         </span>
@@ -45,7 +45,7 @@ const Footer = () => {
                       </a>
                     </li>
                     <li className="footer_link">
-                      <a href="#">
+                      <a href="tel:+919876543210">
                         <span className="icon">
                           <img src={CallIcon} alt="" />
                         </span>

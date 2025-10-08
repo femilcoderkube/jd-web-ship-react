@@ -1976,10 +1976,10 @@ section.section.hero-section.animation-section.terms {
 section.section.hero-section.animation-section.about p{
   font-size: 1.25rem;
 }
-@media (max-width:991px) {
+@media (max-width:768px) {
   section.jd_about .jd_about-cont p,
   section.section.hero-section.animation-section.about p{
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 

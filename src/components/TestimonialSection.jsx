@@ -49,7 +49,7 @@ const TestimonialSection = () => {
                     </div>
                     <div className="reviewers">
                       <span className="name">Ramesh Kumar,</span>
-                      <span className="designation">Wholesaler</span>
+                      {/* <span className="designation">Wholesaler</span> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
@@ -62,7 +62,7 @@ const TestimonialSection = () => {
                     </div>
                     <div className="reviewers">
                       <span className="name">Pooja Shah,</span>
-                      <span className="designation">Retailer</span>
+                      {/* <span className="designation">Retailer</span> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
@@ -76,7 +76,7 @@ const TestimonialSection = () => {
                     </div>
                     <div className="reviewers">
                       <span className="name">Arjun Patel,</span>
-                      <span className="designation">Retailer</span>
+                      {/* <span className="designation">Retailer</span> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
@@ -89,7 +89,7 @@ const TestimonialSection = () => {
                     </div>
                     <div className="reviewers">
                       <span className="name">Sneha Verma ,</span>
-                      <span className="designation">Retailer</span>
+                      {/* <span className="designation">Retailer</span> */}
                     </div>
                   </SwiperSlide>
                   <SwiperSlide className="testimonial_slide swiper-slide card">
@@ -102,7 +102,7 @@ const TestimonialSection = () => {
                     </div>
                     <div className="reviewers">
                       <span className="name">Mohammed Ali,</span>
-                      <span className="designation">Retailer</span>
+                      {/* <span className="designation">Retailer</span> */}
                     </div>
                   </SwiperSlide>
                   {/* <SwiperSlide className="testimonial_slide swiper-slide card">

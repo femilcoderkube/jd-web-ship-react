@@ -1,16 +1,3 @@
-.hero-section {
-  max-width: 100%;
-  min-height: 70vh;
-  width: 100vw;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  padding: 4.25rem 0;
-  overflow: hidden;
-  background-color: var(--body-text-color);
-  border-radius: 1.5rem;
-}
 
 .hero-section.terms{
   min-height: 70vh;

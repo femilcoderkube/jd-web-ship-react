@@ -1,16 +1,3 @@
-.hero-section {
-  max-width: 100%;
-  min-height: 90vh;
-  width: 100vw;
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: center;
-  padding: 4.25rem 0;
-  overflow: hidden;
-  background-color: var(--body-text-color);
-  border-radius: 1.5rem;
-}
 
 .hero-section__content {
   color: var(--text-light-color);
@@ -194,17 +181,20 @@ section.jd_values  .jd_values-title p{
       flex-direction: column-reverse;
       gap: 30px;
     }
-    .row.jd_about-mission{
+    .row.jd_about-mission,
+    .row.jd_about-vision{
        gap: 18px;
     }
     section.jd_about .jd_about-vision-cont p,
-    section.jd_about .jd_about-mission-cont p{
-      font-size: 16px;
+    section.jd_about .jd_about-mission-cont p,
+    section.jd_trust p,
+    section.jd_trust ul{
+      font-size: 1rem;
     }
     section.jd_about .jd_about-vision,
     section.jd_values{
           padding: 2.375rem 0;
-          /* margin-bottom: 1.5rem; */
+          margin-bottom: 0;
       }
       .jd_values-card .col-md-4{
         max-width: 100%;

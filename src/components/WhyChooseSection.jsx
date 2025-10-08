@@ -29,7 +29,7 @@ const WhyChooseSection = () => {
                     We believe in fairness and simplicity, which is why our
                     tools are designed to save you time, reduce costs, and help
                     you manage your business with ease. Selling online should
-                    not be complicated, and with JD Web & Ship, it isn’t.
+                    not be complicated, and with JDwebnship, it isn’t.
                   </p>
                 </div>
               </div>

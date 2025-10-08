@@ -476,7 +476,7 @@ ul.timeline {
   .section__header+.section__body,
   .hero-section__assets img,
   .hero-section__assets svg {
-    margin-top: 1.875rem;
+    margin-top: 1.875rem !important;
   }
 
 

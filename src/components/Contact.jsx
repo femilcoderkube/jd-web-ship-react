@@ -238,7 +238,8 @@ const ContactSection = () => {
                     <li>
                       <a
                         className="flex align-items-center hover-link"
-                        href="#"
+                        href="https://maps.app.goo.gl/RcDoGytNG36BPNhL6"
+                        target="_blank"
                       >
                         <span className="icon-bg">
                           <img src={MapPin} alt="Location" />
@@ -301,7 +302,12 @@ const ContactSection = () => {
                 <div className="jd-contact-block img">
                   <img src={MapImg} alt="Map" />
                   <div className="map-overlay">
-                    <a href="#">View Map</a>
+                    <a
+                      href="https://maps.app.goo.gl/RcDoGytNG36BPNhL6"
+                      target="_blank"
+                    >
+                      View Map
+                    </a>
                   </div>
                 </div>
               </div>
